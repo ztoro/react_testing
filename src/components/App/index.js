@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../../logo.svg';
 import './App.css';
-import Intro from './components/Intro';
+import Intro from '../Intro';
 
 
 class App extends Component {
+    state = {
+        series: ["alma","körte"]
+    }
+
+    variable = "alma";
+
   render() {
     return (
       <div className="App">
@@ -12,6 +18,8 @@ class App extends Component {
           <h1 className="App-title">Zoli Teszt App</h1>
         </header>
           <Intro message="I'm General Kenobi"/>
+          Series length: {this.state.series.length}
+          {this.variable}
       </div>
     );
   }
